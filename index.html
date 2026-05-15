@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent | Fast Fruit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; color: #333; }
+        .page { display: none; padding-bottom: 80px; min-height: 100vh; }
+        .active-page { display: block; }
+        .header { padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .search-bar { background: #f2f2f2; padding: 12px 20px; border-radius: 25px; margin: 0 20px; display: flex; align-items: center; }
+        .search-bar input { border: none; background: transparent; outline: none; margin-left: 10px; width: 100%; }
+        .banner { background: #fdf2f2; margin: 20px; padding: 25px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .banner img { width: 80px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+        .card { background: #f9f9f9; padding: 15px; border-radius: 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 100px; object-fit: contain; }
+        .nav-bar { position: fixed; bottom: 0; width: 100%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 15px 0; z-index: 100; }
+        .nav-bar i { font-size: 24px; color: #bdbdbd; cursor: pointer; }
+        .nav-bar i.active { color: #000; }
+        .post { padding: 15px; border-bottom: 8px solid #f5f5f5; }
+        .post img { width: 100%; border-radius: 15px; margin-top: 10px; }
+        .btn-order { background: #000; color: #fff; width: 90%; padding: 18px; border-radius: 15px; border: none; margin: 20px 5%; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div id="home" class="page active-page">
+        <div class="header"><h3>Nexcent</h3><i class="fa-regular fa-bell"></i></div>
+        <div class="search-bar"><i class="fa fa-search"></i><input type="text" placeholder="Search..."></div>
+        <div class="banner"><div><h2>Fresh Pear<br><span style="font-size:14px;font-weight:normal">20% Discount</span></h2></div><img src="https://cdn-icons-png.flaticon.com/512/3194/3194591.png"></div>
+        <div class="grid">
+            <div class="card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=200"><h4>Orange</h4><p>$10.99</p></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1550258114-b838e9763c9c?w=200"><h4>Pineapple</h4><p>$8.99</p></div>
+        </div>
+    </div>
+
+    <div id="gallery" class="page">
+        <h3 style="text-align:center; padding:15px;">Gallery Feed</h3>
+        <div class="post">
+            <strong>Helena</strong> in Fruits Group
+            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600">
+            <p><i class="fa-regular fa-heart"></i> 21 Likes</p>
+        </div>
+    </div>
+
+    <div id="checkout" class="page">
+        <h3 style="padding:20px;">My Cart</h3>
+        <div style="display:flex; padding:20px; align-items:center; border-bottom:1px solid #eee;">
+            <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=100" style="width:60px; border-radius:10px; margin-right:15px;">
+            <div><h4>Orange</h4><p>Qty: 1</p></div>
+            <b style="margin-left:auto;">$10.99</b>
+        </div>
+        <button class="btn-order" onclick="alert('Order Successful!')">Place Order</button>
+    </div>
+
+    <div class="nav-bar">
+        <i class="fa fa-home active" onclick="changePage('home', this)"></i>
+        <i class="fa fa-th-large" onclick="changePage('gallery', this)"></i>
+        <i class="fa fa-shopping-cart" onclick="changePage('checkout', this)"></i>
+        <i class="fa fa-user" onclick="alert('Profile section coming soon!')"></i>
+    </div>
+
+    <script>
+        function changePage(pageId, element) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+            document.getElementById(pageId).classList.add('active-page');
+            document.querySelectorAll('.nav-bar i').forEach(i => i.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
