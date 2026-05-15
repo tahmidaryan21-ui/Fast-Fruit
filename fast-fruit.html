@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast-Fruit | Official</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #ffffff; padding-bottom: 80px; }
+        .header { padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .search-area { padding: 0 20px; }
+        .search-bar { background: #f2f2f2; padding: 12px 20px; border-radius: 25px; display: flex; align-items: center; }
+        .search-bar input { border: none; background: transparent; outline: none; margin-left: 10px; width: 100%; }
+        .banner { background: #fdf2f2; margin: 20px; padding: 25px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .banner h2 { margin: 0; font-size: 20px; color: #333; }
+        .banner img { width: 70px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+        .card { background: #f9f9f9; padding: 15px; border-radius: 15px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 90px; object-fit: contain; margin-bottom: 10px; }
+        .card h4 { margin: 5px 0; font-size: 15px; }
+        .card p { color: #4CAF50; font-weight: bold; margin: 0; }
+        .nav-bar { position: fixed; bottom: 0; width: 100%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 15px 0; }
+        .nav-bar i { font-size: 22px; color: #bdbdbd; cursor: pointer; }
+        .nav-bar i.active { color: #000; }
+    </style>
+</head>
+<body>
+    <div class="header"><h3>Fast-Fruit</h3><i class="fa-regular fa-bell"></i></div>
+    <div class="search-area">
+        <div class="search-bar"><i class="fa fa-search"></i><input type="text" placeholder="Search fresh fruits..."></div>
+    </div>
+    <div class="banner">
+        <div><h2>Banner title<br><span style="font-size: 14px; font-weight: normal; color: #666;">Special offer for you</span></h2></div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3194/3194591.png">
+    </div>
+    <div style="padding: 0 20px; font-weight: bold;">Title ></div>
+    <div class="grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=200"><h4>Title</h4><p>$10.99</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1550258114-b838e9763c9c?w=200"><h4>Title</h4><p>$8.99</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=200"><h4>Title</h4><p>$12.50</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200"><h4>Title</h4><p>$7.99</p></div>
+    </div>
+    <div class="nav-bar">
+        <i class="fa fa-home active"></i>
+        <i class="fa fa-compass"></i>
+        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-bell"></i>
+        <i class="fa fa-user"></i>
+    </div>
+</body>
+</html>
