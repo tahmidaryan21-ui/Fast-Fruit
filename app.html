@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast-Fruit | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #ffffff; padding-bottom: 80px; }
+        .header { padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .search-area { padding: 0 20px; }
+        .search-bar { background: #f2f2f2; padding: 12px 20px; border-radius: 25px; display: flex; align-items: center; }
+        .search-bar input { border: none; background: transparent; outline: none; margin-left: 10px; width: 100%; }
+        .banner { background: #fdf2f2; margin: 20px; padding: 25px; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .banner h2 { margin: 0; font-size: 22px; color: #333; }
+        .banner img { width: 80px; }
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+        .card { background: #f9f9f9; padding: 15px; border-radius: 15px; text-align: center; }
+        .card img { width: 100%; height: 100px; object-fit: contain; }
+        .nav-bar { position: fixed; bottom: 0; width: 100%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 15px 0; }
+        .nav-bar i { font-size: 24px; color: #bdbdbd; }
+    </style>
+</head>
+<body>
+    <div class="header"><h2>Fast-Fruit</h2><i class="fa-regular fa-bell"></i></div>
+    <div class="search-area"><div class="search-bar"><i class="fa fa-search"></i><input type="text" placeholder="Search fruits..."></div></div>
+    <div class="banner"><div><h2>20% Discount <br>on Pears</h2></div><img src="https://cdn-icons-png.flaticon.com/512/3194/3194591.png"></div>
+    <div class="product-grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400"><h4>Orange</h4><p>$12.50</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1550258114-b838e9763c9c?w=400"><h4>Pineapple</h4><p>$18.00</p></div>
+    </div>
+    <div class="nav-bar">
+        <i class="fa fa-home" style="color:#000;"></i>
+        <i class="fa fa-th-large"></i>
+        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-user"></i>
+    </div>
+</body>
+</html>
