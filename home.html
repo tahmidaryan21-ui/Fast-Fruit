@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; padding-bottom: 70px; }
+        .header { padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .search-bar { background: #f5f5f5; padding: 12px 20px; border-radius: 30px; margin: 0 20px; display: flex; align-items: center; color: #888; }
+        .search-bar input { border: none; background: transparent; outline: none; margin-left: 10px; width: 100%; }
+        .banner { background: #fdf2f2; margin: 20px; padding: 30px; border-radius: 20px; position: relative; overflow: hidden; }
+        .banner h2 { margin: 0; font-size: 24px; color: #333; }
+        .banner img { position: absolute; right: 10px; top: 10px; width: 100px; }
+        .section-title { padding: 0 20px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 20px; }
+        .product-card { background: #f9f9f9; padding: 15px; border-radius: 15px; text-align: left; }
+        .product-card img { width: 100%; height: 120px; object-fit: contain; border-radius: 10px; }
+        .product-card h4 { margin: 10px 0 5px; font-size: 16px; }
+        .product-card p { color: #4CAF50; font-weight: bold; margin: 0; }
+        .nav-bottom { position: fixed; bottom: 0; width: 100%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 15px 0; }
+        .nav-bottom i { font-size: 22px; color: #ccc; cursor: pointer; transition: 0.3s; }
+        .nav-bottom i.active { color: #000; }
+    </style>
+</head>
+<body>
+    <div class="header"><h3>Nexcent</h3><i class="fa-regular fa-bell"></i></div>
+    <div class="search-bar"><i class="fa fa-search"></i><input type="text" placeholder="Search fruit..."></div>
+    <div class="banner">
+        <h2>Fresh Fruits <br>Special Offer</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/3194/3194591.png" alt="fruit">
+    </div>
+    <div class="section-title"><b>Featured Items</b> <i class="fa fa-chevron-right"></i></div>
+    <div class="grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400" alt="orange">
+            <h4>Fresh Orange</h4>
+            <p>$12.00</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1550258114-b838e9763c9c?w=400" alt="pineapple">
+            <h4>Pineapple</h4>
+            <p>$15.00</p>
+        </div>
+    </div>
+    <div class="nav-bottom">
+        <i class="fa fa-home active" onclick="location.href='home.html'"></i>
+        <i class="fa fa-th-large" onclick="location.href='gallery.html'"></i>
+        <i class="fa fa-shopping-cart" onclick="location.href='checkout.html'"></i>
+        <i class="fa fa-user" onclick="location.href='signin.html'"></i>
+    </div>
+</body>
+</html>
