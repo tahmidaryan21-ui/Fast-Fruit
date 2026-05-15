@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent | Complete App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { margin: 0; background: #fff; padding-bottom: 80px; }
+        
+        .page { display: none; min-height: 100vh; animation: fadeIn 0.3s ease; }
+        .active-page { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Common Header */
+        .header { padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: bold; color: #10B981; }
+
+        /* Home Page Elements */
+        .search-bar { background: #f3f4f6; padding: 12px 20px; border-radius: 15px; margin: 0 20px 20px; display: flex; align-items: center; }
+        .search-bar input { border: none; background: transparent; outline: none; margin-left: 10px; width: 100%; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+        .card { border: 1px solid #eee; padding: 12px; border-radius: 15px; text-align: center; }
+        .card img { width: 100%; height: 100px; object-fit: cover; border-radius: 10px; }
+
+        /* Profile Page Design */
+        .profile-header { text-align: center; padding: 40px 20px; background: #f9fdfb; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #10B981; margin-bottom: 15px; }
+        .profile-info h2 { margin: 5px 0; }
+        .profile-info p { color: #666; margin: 0; }
+        .profile-menu { padding: 20px; }
+        .menu-item { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #f0f0f0; color: #333; cursor: pointer; }
+        .menu-item i { width: 30px; color: #10B981; }
+        .menu-item span { flex: 1; font-weight: 500; }
+
+        /* Bottom Nav */
+        .nav-bar { position: fixed; bottom: 0; width: 100%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 15px 0; }
+        .nav-bar i { font-size: 22px; color: #ccc; cursor: pointer; }
+        .nav-bar i.active { color: #10B981; }
+    </style>
+</head>
+<body>
+
+    <div id="home" class="page active-page">
+        <div class="header"><div class="logo">Nexcent</div><i class="fa-regular fa-bell"></i></div>
+        <div class="search-bar"><i class="fa fa-search"></i><input type="text" placeholder="Search fruits..."></div>
+        <div class="grid">
+            <div class="card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=200"><h4>Orange</h4><p>$10.99</p></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1550258114-b838e9763c9c?w=200"><h4>Pineapple</h4><p>$15.50</p></div>
+        </div>
+    </div>
+
+    <div id="profile" class="page">
+        <div class="profile-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="profile-img">
+            <div class="profile-info">
+                <h2>Zahid FF</h2>
+                <p>zahid.ff@email.com</p>
+            </div>
+        </div>
+        <div class="profile-menu">
+            <div class="menu-item"><i class="fa fa-user-edit"></i><span>Edit Profile</span><i class="fa fa-chevron-right"></i></div>
+            <div class="menu-item"><i class="fa fa-shopping-bag"></i><span>My Orders</span><i class="fa fa-chevron-right"></i></div>
+            <div class="menu-item"><i class="fa fa-location-dot"></i><span>Shipping Address</span><i class="fa fa-chevron-right"></i></div>
+            <div class="menu-item"><i class="fa fa-credit-card"></i><span>Payment Methods</span><i class="fa fa-chevron-right"></i></div>
+            <div class="menu-item" style="color: red;"><i class="fa fa-sign-out-alt"></i><span>Logout</span></div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <i class="fa fa-home active" onclick="showPage('home', this)"></i>
+        <i class="fa fa-th-large" onclick="alert('Gallery section is coming!')"></i>
+        <i class="fa fa-shopping-cart" onclick="alert('Your cart is empty!')"></i>
+        <i class="fa fa-user" onclick="showPage('profile', this)"></i>
+    </div>
+
+    <script>
+        function showPage(pageId, element) {
+            // সব পেজ হাইড করা
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+            // সিলেক্টেড পেজ শো করা
+            document.getElementById(pageId).classList.add('active-page');
+            
+            // আইকন কালার চেঞ্জ করা
+            document.querySelectorAll('.nav-bar i').forEach(i => i.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
